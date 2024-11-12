@@ -3,10 +3,12 @@
 <head>
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta nmae="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Pars Coder || Portfolio Websitee</title>
           <link rel="stylesheet" href="style.css">
           <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+         
 </head>
 <body>
               <!--header site-->
@@ -53,25 +55,24 @@
 
           </div>
 
-
           <div class="behance-info">
             
             
              <h5>Behance : </h5>
-             <span>behance.net/rashi</span>
+             <span>https://www.behance.net/fathimarashidha</span>
             
                       </div>
                     </div>
           <div class="btn-box">
- <a href="#" class="btn">Download CV</a>
- <a href="#" class="btn">Hire Me Now </a>
+ <a href="Fathima-Rashidha-CV/Fathima-Rashidha-CV.pdf" class="btn" target="_blank">Download CV</a>
+ <a href="#contact" class="btn">Hire Me Now </a>
 </div>
 
 <div class="social-icons">
-    <a href="#"><i class='bx bxl-linkedin'></i></a>
-    <a href="#"><i class='bx bxl-github'></i></a>
-    <a href="#"><i class='bx bxl-whatsapp'></i></a>
-    <a href="#"><i class='bx bxl-dribbble'></i></a>
+    <a href="https://www.linkedin.com/in/rashidhamnf/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://github.com/rashidhamnf" target="_blank"><i class='bx bxl-github'></i></a>
+    <a href="https://wa.me/0775665117" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    <a href="https://github.com/rashidhamnf/PORTFOLIO" target="_blank"><i class='bx bxl-dribbble'></i></a>
 </div>
 
                 </div>
@@ -207,11 +208,38 @@
     With expertise in tools like Figma, Adobe Illustrator, and frameworks like React and Vite, I enjoy creating seamless and engaging digital experiences. My portfolio reflects a commitment to quality and innovation, showcasing projects where I’ve applied responsive design principles, integrated backend technologies, and collaborated effectively within teams to bring ideas to life. 
     I’m excited to continue growing and contributing to impactful digital solutions.</p>
 
-<div class="btn-box">
-    <a href="#" class="btn">Read More!</a>
-</div>
+    <div id="additional-education" class="hidden">
+        <h3>Education</h3>
+        <ul>
+            <li>General Certificate of Education (O-Level) - Achieved Distinction in multiple subjects</li>
+            <li>General Certificate of Education (A-Level) - Passed with Credit and Ordinary Passes</li>
+            <li>Currently enrolled in NDT Diploma, IT Program with a strong GPA</li>
+        </ul>
     </div>
-    </section>
+
+    <!-- Read More Button -->
+    <div class="btn-box">
+        <a href="javascript:void(0);" id="read-more-btn" class="btn" onclick="toggleEducationContent()">EDUCATION</a>
+    </div>
+</div>
+</section>
+
+<script>
+function toggleEducationContent() {
+    const educationSection = document.getElementById('additional-education');
+    const button = document.getElementById('read-more-btn');
+    
+    // Toggle visibility of the education content
+    if (educationSection.classList.contains('hidden')) {
+        educationSection.classList.remove('hidden');
+        button.textContent = 'Read Less'; // Change button text
+    } else {
+        educationSection.classList.add('hidden');
+        button.textContent = 'Read More'; // Change button text back
+    }
+}
+</script>
+
 
 
 <!--services  part ------------------------------------>
@@ -338,49 +366,62 @@
 
               </div>
             
-              
-              <div class="skill-right">
-              <h3>Soft Skills</h3>
-            <div class="soft">
-                
-                <div class="circular-skill">
-                    <svg>
-                        <circle class="background" cx="40" cy="40" r="35"></circle>
-                        <circle class="progress" cx="40" cy="40" r="35" style="--percent: 90;"></circle>
-                    </svg>
-                    <p>90%<br><span>Teamwork</span></p>
+         <!-- Soft Skills Section -->
+         <div class="skill-right">
+            <h3>Soft Skills</h3>
+            <div class="skill-bar">
+                <div class="info">
+                  <p>Communication</p>
+                  <p>85%</p>
                 </div>
-                
-                <div class="circular-skill">
-                    <svg>
-                        <circle class="background" cx="40" cy="40" r="35"></circle>
-                        <circle class="progress" cx="40" cy="40" r="35" style="--percent: 75;"></circle>
-                    </svg>
-                    <p>75%<br><span>Problem Solving</span></p>
+                <div class="bar">
+                  <span class="communication"></span>
                 </div>
+              </div>
+          
+              <!-- Teamwork Skill -->
+              <div class="skill-bar">
+                <div class="info">
+                  <p>Teamwork</p>
+                  <p>90%</p>
+                </div>
+                <div class="bar">
+                  <span class="teamwork"></span>
+                </div>
+              </div>
+          
+              <!-- Problem Solving Skill -->
+              <div class="skill-bar">
+                <div class="info">
+                  <p>Problem Solving</p>
+                  <p>80%</p>
+                </div>
+                <div class="bar">
+                  <span class="problem-solving"></span>
+                </div>
+              </div>
+          
+              <!-- Leadership Skill -->
+              <div class="skill-bar">
+                <div class="info">
+                  <p>Leadership</p>
+                  <p>75%</p>
+                </div>
+                <div class="bar">
+                  <span class="leadership"></span>
+                </div>
+              </div>
+          
         
-                <div class="circular-skill">
-                    <svg>
-                        <circle class="background" cx="40" cy="40" r="35"></circle>
-                        <circle class="progress" cx="40" cy="40" r="35" style="--percent: 85;"></circle>
-                    </svg>
-                    <p>85%<br><span>Time Management</span></p>
-                </div>
+            </div>
+        </div>
         
-                <div class="circular-skill">
-                    <svg>
-                        <circle class="background" cx="40" cy="40" r="35"></circle>
-                        <circle class="progress" cx="40" cy="40" r="35" style="--percent: 99;"></circle>
-                    </svg>
-                    <p>99%<br><span>Communication</span></p>
-                </div>
-</div>
-
-</div>        
+        
+    </div>
 </section>
 
 
-<!--portfolio  part ------------------------------------>
+<!--project  part ------------------------------------>
 <section id="projects" class="projects">
 <div class="main-text">
     <span>What i will do for you</span>
@@ -390,49 +431,94 @@
   <div class="container">
     <div class="filter-buttons">
     <button class="btn" data-filter="all">All</button>
-    <button class="btn" data-filter=".product">Product</button>
-    <button class="btn" data-filter=".inter">Interesting</button>
-    <button class="btn" data-filter=".web">Web App</button>
+    <button class="btn" data-filter=".ui-ux">UI/UX</button>
+    <button class="btn" data-filter=".development">Mobile & Website Development</button>
+    <button class="btn" data-filter=".design">Graphic Design</button>
     </div>
 
     <div class="portfolio-gallery">
-     <div class="port-box mix product">
+     <div class="port-box mix ui-ux">
        <div class="port-image">
-         <img src="img/1.jpg" alt="">
+         <img src="img/1.jpeg" alt="Online Shopping Mobile App Design">
 </div>
 
 <div class="port-content">
-    <h3>UI/UX Design</h3>
-    <p>I am a passionate UI/UX designer focused on creating intuitive and impactful digital experiences. </p>
-<a href="#"><i class='bx bx-link-external'></i></a>
+    <h3>UI/UX</h3>
+    <p>Online Shopping Mobile App Design. </p>
+<a href="https://www.figma.com/design/U9ZTgF9xrrvHjCLYnWoJw2/onlineshopping?node-id=0-1&nodetype=canvas&t=Q2f5T0jdtEkudmew-0" target="_blank"><i class='bx bx-link-external'></i></a>
 </div>
   </div>
 
 
 
-  <div class="port-box  mix product">
+  <div class="port-box  mix ui-ux">
     <div class="port-image">
-    <img src="img/2.jpg" alt="">
+    <img src="img/2.jpeg" alt="Pizza Shopping Web Design">
 </div>
 
 <div class="port-content">
-    <h3>UI/UX Design</h3>
-    <p>I am a passionate UI/UX designer focused on creating intuitive and impactful digital experiences. </p>
-<a href="#"><i class='bx bx-link-external'></i></a>
+    <h3>UI/UX</h3>
+    <p>Pizza Shopping Web Design </p>
+<a href="https://www.figma.com/design/kaE7G9T9HV6EDiYjNWqG7c/Pizza-shop?nodeid=0-1&t=hvheIVJoNamZc6X8-1" target="_blank"><i class='bx bx-link-external'></i></a>
 </div>
 </div>
 
 
 
-  <div class="port-box  mix inter">
+<div class="port-box mix development">
     <div class="port-image">
-    <img src="img/3.jpg" alt="">
+        <img src="img/mobile-project.jpg" alt="Created a mobile app with a clean UI.">
+    </div>
+    <div class="port-content">
+        <h3>Mobile & Website Development</h3>
+        <p>Created a mobile app with a clean UI.</p>
+        <a href="https://github.com/rashidhamnf/TrekTempo" target="_blank"><i class='bx bx-link-external'></i></a>
+           
+    </div>
+</div>
+
+
+
+<div class="port-box mix development">
+    <div class="port-image">
+        <img src="img/website-project.jpeg" alt="Mobile & Website Development">
+    </div>
+    <div class="port-content">
+        <h3>Mobile & Website Development</h3>
+        <p>Developed a responsive website.</p>
+        <a href="https://github.com/rashidhamnf/E-Commerce-Restaurant" target="_blank"><i class='bx bx-link-external'></i></a>
+           
+    </div>
+</div>
+
+
+
+
+
+
+
+  <div class="port-box  mix ui-ux">
+    <div class="port-image">
+    <img src="img/mobile-project.jpg" alt="TrekTempo Mobile and Web Design"></div>
+
+<div class="port-content">
+    <h3>UI/UX</h3>
+    <p>TrekTempo Mobile and Web Design. </p>
+<a href="https://www.figma.com/design/8XSkYFoVntXSVZ1cGtb2l7/TrackTempo?t=hvheIVJoNamZc6X8-1" target="_blank"><i class='bx bx-link-external'></i></a>
+</div>
+  </div>
+
+
+
+  <div class="port-box  mix ui-ux">
+    <div class="port-image">
+    <img src="img/1.jpg" alt="TrekTempo Mobile and Web Design">
 </div>
 
 <div class="port-content">
-    <h3>UI/UX Design</h3>
-    <p>I am a passionate UI/UX designer focused on creating intuitive and impactful digital experiences. </p>
-<a href="#"><i class='bx bx-link-external'></i></a>
+    <h3>UI/UX</h3>
+    <p>TrekTempo Mobile and Web Design. </p>
+<a href="https://www.figma.com/design/8XSkYFoVntXSVZ1cGtb2l7/TrackTempo?t=hvheIVJoNamZc6X8-1" target="_blank"><i class='bx bx-link-external'></i></a>
 </div>
   </div>
 
@@ -441,42 +527,56 @@
 
 
 
-  <div class="port-box  mix inter">
+  <div class="port-box  mix design">
     <div class="port-image">
-    <img src="img/4.jpg" alt="">
+    <img src="img/4.jpeg" alt="Buisness Card for encouraging the buisness | High school coach.">
 </div>
 
 <div class="port-content">
-    <h3>UI/UX Design</h3>
-    <p>I am a passionate UI/UX designer focused on creating intuitive and impactful digital experiences. </p>
-<a href="#"><i class='bx bx-link-external'></i></a>
+    <h3>Graphic Design</h3>
+    <p>Buisness Card for encouraging the buisness | High school coach. </p>
+<a href="https://www.canva.com/design/DAGEwZ8ifug/doDceQ6zNCQtVxKntxE2hw/edit?utm_content=DAGEwZ8ifug&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><i class='bx bx-link-external'></i></a>
+</div>
+  </div>
+
+
+
+  <div class="port-box  mix design">
+    <div class="port-image">
+    <img src="img/poster.jpeg" alt="Poster">
+</div>
+
+<div class="port-content">
+    <h3>Graphic Design</h3>
+    <p>Poster </p>
+<a href="https://www.figma.com/design/cQsz8bEFCXP1vg5OLtuRbV/poster?node-id=0-1&t=0tNkQ2xHOgQesEBY-1" target="_blank"><i class='bx bx-link-external'></i></a>
 </div>
   </div>
 
 
 
 
-  <div class="port-box  mix web">
+  <div class="port-box  mix design">
     <div class="port-image">
-    <img src="img/5.jpg" alt="">
+    <img src="img/5.jpeg" alt="">
 </div>
 
 <div class="port-content">
-    <h3>UI/UX Design</h3>
-    <p>I am a passionate UI/UX designer focused on creating intuitive and impactful digital experiences. </p>
-<a href="#"><i class='bx bx-link-external'></i></a>
+    <h3>Graphic Design</h3>
+    <p>Brochure Design for Fancy Shop. </p>
+<a href="https://www.canva.com/design/DAGEg1WZi2s/5-Eih4HAFDw_R4mpLVBNvQ/edit?utm_content=DAGEg1WZi2s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"><i class='bx bx-link-external'></i></a>
 </div>
   </div>
 
-  <div class="port-box  mix web">
+  <div class="port-box  mix ui-ux">
     <div class="port-image">
-    <img src="img/6.jpg" alt="">
+    <img src="img/freshday.PNG" alt="Plant Sale Web Design">
 </div>
 
 <div class="port-content">
-    <h3>UI/UX Design</h3>
-                         <p>I am a passionate UI/UX designer focused on creating intuitive and impactful digital experiences.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+    <h3>UI/UX</h3>
+                         <p>Plant Sale Web Design.</p>
+                    <a href="https://www.figma.com/design/ItnaqUS0pko9UvwzcxHvUh/Plant-sale?t=hvheIVJoNamZc6X8-1" target="_blank"><i class='bx bx-link-external'></i></a>
               </div>
          </div>
       </div>
@@ -516,7 +616,7 @@
 
 
 
-
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
       <script src="mixitup.min.js"></script>
      <script src="script.js"></script>
 </body>
