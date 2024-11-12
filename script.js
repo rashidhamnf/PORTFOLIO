@@ -42,30 +42,29 @@ Array.from(nextWord.children).forEach((letter,i)=>{
 changeText();
 setInterval(changeText,3000)
 
-//circle skill //////////////////////////////////////////////////
 
-const circles = document.querySelectorAll('.circle');
-circles.forEach(elem=>{
-var dots = elem.getAttribute("data-dots");
-var marked = elem.getAttribute("data-percent");
-var percent = Math.floor(dots*marked/100);
-var points = "";
-var rotate = 360 / dots;
 
-for(let i = 0 ; i < dots ; i++){
+document.addEventListener('DOMContentLoaded', function() {
+    function toggleEducationContent() {
+        const educationSection = document.getElementById('additional-education');
+        const button = document.getElementById('read-more-btn');
+        
+        // Toggle visibility of the education content
+        if (educationSection.classList.contains('hidden')) {
+            educationSection.classList.remove('hidden');
+            button.textContent = 'Read Less'; // Change button text
+        } else {
+            educationSection.classList.add('hidden');
+            button.textContent = 'Read More'; // Change button text back
+        }
+    }
+});
 
-    points += '<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>';
-}
-elem.innerHTML = points;
 
-const pointsMarked = elem.querySelectorAll('.points');
-for(let i = 0; i<percent ; i++){
+// Wait for the page to load, then animate the soft skill bars
 
-    pointsMarked[i].classList.add('marked')
+  
 
-}
-
-}) 
 
 //mixitup portfolio section 
 var mixer = mixitup('.portfolio-gallery');
