@@ -174,13 +174,12 @@
             color: #bdbdbd;
             line-height: 1.6;
          }
-         .info-box{
-            display: inline-flex;
-            justify-content: space-between;
-            align-items:center;
-            width: 300px;
-            margin: 1rem 0 2rem;
-         }
+         
+
+
+         .info-box div {
+            margin-bottom: 10px;
+        }
 
          .info-box h5{
             font-weight: 600;
@@ -188,11 +187,10 @@
             font-size: 1rem;
 
          }
-         .info-box span{
-            font-size: .7rem;
-            color:#bdbdbd;
-
-         }
+         .info-box span {
+            display: block;
+            margin-top: 5px;
+        }
          .btn-box{
             display: flex;
             justify-content: space-between;
@@ -324,6 +322,13 @@ font-size: 1.5rem;
    filter: blur(50px)
 }
 
+
+
+
+.hidden {
+   display: none;
+}
+
 /*About section css-----------------------------------------------------------------------------------------------*/
 
 
@@ -409,6 +414,10 @@ font-size: 1.5rem;
    font-size: 1rem;
    font-weight: 600;
 }
+
+.hidden {
+   display: none;
+ }
 
 
 /*services section css-------------------------------------------------------------------------*/
@@ -559,197 +568,127 @@ outline: 3px solid var(--bg-color);
    animation: c 6s;
 }
 
-/*skill right */
-
-.soft{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-}
-.box{
-   position: relative;
-   margin: 10px 0;
-   flex: 1 1 15rem;
-}
-
-.box .text{
-text-align: center;
-color: #fff;
-font-size: 1rem;
-}
-
-.box .text big{
-   font: 400;
-   letter-spacing: 1px;
-   position: absolute;
-   top: 40%;
-   left: 50%;
-   transform: translate(-50% , -50%);
-
-}
-
-.box .text small{
-display: block;
-font-weight: 600;
-}
-
-.circular-skill {
-   position: relative;
-   width: 100px;
-   height: 100px;
-}
-
-.circular-skill svg {
-   width: 80px;
-   height: 80px;
-   transform: rotate(-90deg);
-}
-
-.circular-skill circle {
-   fill: none;
-   stroke-width: 8;
-   r: 35;
-   cx: 40;
-   cy: 40;
-}
-
-.circular-skill .background {
-   stroke: #ddd;
-}
-
-.circular-skill .progress {
-   stroke: #00f2ff;
-   stroke-dasharray: 220;
-   stroke-dashoffset: 220; /* initially hidden */
-   animation: progress-animation 2s ease-out forwards;
-}
-
-.circular-skill .progress {
-   /* Adjust the offset based on percentage */
-   stroke-dashoffset: calc(220 - (220 * var(--percent)) / 100);
-}
-
-@keyframes progress-animation {
-   from {
-       stroke-dashoffset: 220; /* start from 0% */
-   }
-   to {
-       stroke-dashoffset: calc(220 - (220 * var(--percent)) / 100); /* reach the desired percentage */
-   }
-}
-
-.circular-skill p {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   margin: 0;
-   font-size: 14px;
-   font-weight: bold;
-   color: #00f2ff;
-}
-
-.circular-skill p span {
-   font-size: 10px;
-   color: #bbb;
-}
-
-
-
-
-.radial-bar{
-   width: 100;
+/* General Reset and Styles for Soft Skills Section */
+.soft-skill-main {
    display: flex;
-   flex-wrap:wrap;
-   justify-content: space-evenly;
-   align-items: flex-start;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 40px;
+ }
+ 
+ .soft-skill-left {
+   width: 80%;
+   max-width: 900px;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .soft-skill-left h3 {
+   text-align: center;
+   margin-bottom: 30px;
+   font-size: 28px;
+   color: #333;
+ }
+ 
+ .skill-right .skill-bar .info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 10px;
 }
 
-.radial-bars .radial-bar{
-   width: 50%;
-   height:170px;
-   margin-bottom: 10px;
-   position:relative;
-
+.skill-right .skill-bar .bar {
+   width: 100%;
+   height: 10px;
+   background-color: var(--bg-color);
+   border-radius: 25px;
+   margin-top: 10px;
+   position: relative;
 }
 
-
-.radial-bars .radial-bar svg{
+/* Skill Bar Animation */
+.skill-bar .bar span {
+   width: 0%; /* Start with 0% width and animate */
+   height: 100%;
    position: absolute;
-   top: 50%;
-   left:50%;
-   transform: translate(-50%, -50%) rotate(-90deg);
-   width: 120px;
-   height: 160px;
+   left: 0;
+   background: var(--hover-color);
+   border-radius: 25px;
+   box-shadow: var(--neon-box-shadow);
+   animation-timing-function: ease-in-out;
+   animation-fill-mode: forwards;
 }
 
-.radial-bars .radial-bar .progress-bar{
-   stroke-width: 10;
-   stroke:black;
-   fill:transparent;
-   stroke-dasharray: 502;
-   stroke-dashoffset: 502;
-   stroke-linecap: round;
-   animation: animate-bar 1s linear formards;
+/* Communication */
+.skill-bar .bar .communication {
+   animation: communication 2s;
+   animation-delay: 0.5s;
 }
 
 
-@keyframes animate-bar{
+
+/* Teamwork */
+.skill-bar .bar .teamwork {
+   animation: teamwork 2.5s;
+   animation-delay: 0.7s;
+}
+
+/* Problem Solving */
+.skill-bar .bar .problem-solving {
+   animation: problem-solving 3s;
+   animation-delay: 1s;
+}
+
+/* Leadership */
+.skill-bar .bar .leadership {
+   animation: leadership 3.5s;
+   animation-delay: 1.2s;
+}
+
+/* Keyframes for Animations */
+
+
+@keyframes communication{
+   0%{
+      width:0%
+   }
    100%{
-      stroke-dashoffset: -1;
+      width:90%;
+   }}
+@keyframes teamwork{
+   0%{
+      width:0%
    }
-}
-.path{
-   stroke-width: 10;
-   stroke: #12f7ff;
-   fill: transparent;
-   stroke-dasharray: 502;
-   stroke-dashoffset: 502;
-   stroke-linecap: round;
-
-}
-
-.path-1{animation: animate-path1 1s 1s linear forwards;}
-.path-2{animation: animate-path1 1s 1s linear forwards;}
-.path-3{animation: animate-path1 1s 1s linear forwards;}
-.path-4{animation: animate-path1 1s 1s linear forwards;}
-
-
-
-
-@keyframes animate-path1{
-
-100%{
-   stroke-dashoffset: 50;
-}
-
-}
-
-@keyframes animate-path1{
-
    100%{
-      stroke-dashoffset: 175;
+      width:80%;
    }
-   
+}
+
+@keyframes problem-solving{
+   0%{
+      width:0%
    }
+   100%{
+      width:50%;
+   }
+}
+ 
+
+
+@keyframes leadership{
+   0%{
+      width:0%
+   }
+   100%{
+      width:65%;
+   }
+}
 
 
 
-   @keyframes animate-path1{
-
-      100%{
-         stroke-dashoffset: 125;
-      }
-      
-      }
-
-
-      @keyframes animate-path1{
-
-         100%{
-            stroke-dashoffset: 75;
-         }
-         
-         }
 
 
 /*portfolio part css------------*/
