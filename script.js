@@ -67,4 +67,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //mixitup portfolio section 
-var mixer = mixitup('.portfolio-gallery');
