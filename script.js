@@ -61,6 +61,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-buttons .btn");
+    const projectBoxes = document.querySelectorAll(".port-box");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+
+            projectBoxes.forEach(box => {
+                if (filter === "all" || box.classList.contains(filter.substring(1))) {
+                    box.style.display = "block";
+                } else {
+                    box.style.display = "none";
+                }
+            });
+
+            // Update active button style
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+        });
+    });
+});
+
+
 // Wait for the page to load, then animate the soft skill bars
 
   

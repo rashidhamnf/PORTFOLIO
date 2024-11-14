@@ -622,31 +622,23 @@ outline: 3px solid var(--bg-color);
    animation-fill-mode: forwards;
 }
 
-/* Communication */
+/* Soft Skills Section without Animation */
 .skill-bar .bar .communication {
-   animation: communication 2s;
-   animation-delay: 0.5s;
+   width: 85%;
 }
 
-
-
-/* Teamwork */
 .skill-bar .bar .teamwork {
-   animation: teamwork 2.5s;
-   animation-delay: 0.7s;
+   width: 90%;
 }
 
-/* Problem Solving */
 .skill-bar .bar .problem-solving {
-   animation: problem-solving 3s;
-   animation-delay: 1s;
+   width: 80%;
 }
 
-/* Leadership */
 .skill-bar .bar .leadership {
-   animation: leadership 3.5s;
-   animation-delay: 1.2s;
+   width: 75%;
 }
+
 
 /* Keyframes for Animations */
 
