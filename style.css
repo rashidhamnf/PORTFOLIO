@@ -561,21 +561,21 @@ outline: 3px solid var(--bg-color);
 
 .skill-bar .bar .flutter{
    width:70%;
-   animation: flutter 4s;
+   animation: flutter 5s;
 }
 
 .skill-bar .bar .adobe xd{
    width:90%;
-   animation: adobe xd 4s;
+   animation: adobe xd 6s;
 }
 
 .skill-bar .bar .javascript{
    width:60%;
-   animation: javascript 5s;
+   animation: javascript 7s;
 }
 .skill-bar .bar .c{
    width:65%;
-   animation: c 6s;
+   animation: c 8s;
 }
 
 /* General Reset and Styles for Soft Skills Section */
