@@ -919,6 +919,23 @@ footer a i{
    }
 }
 
+@keyframes adobe xd{
+   0%{
+      width:0%
+   }
+   100%{
+      width:90%;
+   }
+}
+
+@keyframes flutter{
+   0%{
+      width:0%
+   }
+   100%{
+      width:70%;
+   }
+}
 
 @keyframes css{
    0%{
