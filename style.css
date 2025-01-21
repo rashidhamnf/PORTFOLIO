@@ -720,8 +720,8 @@ outline: 3px solid var(--bg-color);
 
 .portfolio-gallery{
    display:grid;
-   grid-template-columns: repeat(auto-fill , minmax(90px, 1fr));
-   gap: 1rem;
+   grid-template-columns: repeat(auto-fill , minmax(150px, 1fr));
+   gap: 2rem;
 }
 
 .port-box{
